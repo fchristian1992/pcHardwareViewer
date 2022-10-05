@@ -9,9 +9,9 @@ import org.hibernate.annotations.GenericGenerator;
 @Entity(name = "CPU")
 @Table(name = "cpu", schema = "hardwareviewer")
 public class CPU {
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
-    @Id
     private int cpuId;
     
     @Column(name = "cores")

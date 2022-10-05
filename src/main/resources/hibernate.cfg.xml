@@ -16,5 +16,9 @@
         <property name="hibernate.c3p0.idle_test_period">3000</property>
 
         <mapping class="entity.User"/>
+        <mapping class="entity.DataStorage"/>
+        <mapping class="entity.CpuCooler"/>
+        <mapping class="entity.Build"/>
+        <mapping class="entity.CPU"/>
     </session-factory>
 </hibernate-configuration>
