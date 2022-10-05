@@ -8,7 +8,7 @@ import java.util.Objects;
 /**
  * The type Data storage.
  */
-@Entity
+@Entity(name = "DataStorage")
 @Table(name = "data_storage", schema = "hardwareviewer")
 public class DataStorage {
     @Id

@@ -20,5 +20,6 @@
         <mapping class="entity.CpuCooler"/>
         <mapping class="entity.Build"/>
         <mapping class="entity.CPU"/>
+        <mapping class="entity.Gpu"/>
     </session-factory>
 </hibernate-configuration>
