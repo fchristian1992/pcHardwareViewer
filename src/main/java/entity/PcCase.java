@@ -9,7 +9,7 @@ import java.util.Objects;
  * The type Pc case.
  */
 @Entity(name = "pcCase")
-@Table(name = "pc_case", schema = "hardwareviewer", catalog = "")
+@Table(name = "pc_case", schema = "hardwareviewer")
 public class PcCase {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")

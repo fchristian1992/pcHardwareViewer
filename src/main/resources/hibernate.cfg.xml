@@ -23,5 +23,6 @@
         <mapping class="entity.Gpu"/>
         <mapping class="entity.Motherboard"/>
         <mapping class="entity.PcCase"/>
+        <mapping class="entity.Psu"/>
     </session-factory>
 </hibernate-configuration>
