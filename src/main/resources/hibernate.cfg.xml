@@ -21,5 +21,6 @@
         <mapping class="entity.Build"/>
         <mapping class="entity.CPU"/>
         <mapping class="entity.Gpu"/>
+        <mapping class="entity.Motherboard"/>
     </session-factory>
 </hibernate-configuration>
