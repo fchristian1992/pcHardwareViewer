@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76adffd3-7fdd-4679-af1c-67eb2eeb877d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Psu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/15b3b9db-0723-47b8-87bf-37f49e6994ac.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/15b3b9db-0723-47b8-87bf-37f49e6994ac.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f9b995e1-caa1-462a-9636-75d03c2d3cca.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f9b995e1-caa1-462a-9636-75d03c2d3cca.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Ram.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/PcCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/PcCase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +78,7 @@
       <workItem from="1664304020621" duration="8702000" />
       <workItem from="1664469990468" duration="1301000" />
       <workItem from="1664815925177" duration="10226000" />
-      <workItem from="1664986499862" duration="14354000" />
+      <workItem from="1664986499862" duration="15174000" />
     </task>
     <servers />
   </component>

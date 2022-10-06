@@ -24,5 +24,6 @@
         <mapping class="entity.Motherboard"/>
         <mapping class="entity.PcCase"/>
         <mapping class="entity.Psu"/>
+        <mapping class="entity.Ram"/>
     </session-factory>
 </hibernate-configuration>
