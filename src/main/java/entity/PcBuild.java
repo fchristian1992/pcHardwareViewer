@@ -6,9 +6,9 @@ import javax.persistence.*;
 /**
  * The type Build.
  */
-@Entity(name = "Build")
-@Table(name = "builds")
-public class Build {
+@Entity(name = "PC_build")
+@Table(name = "computer_builds")
+public class PcBuild {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
@@ -41,7 +41,7 @@ public class Build {
     /**
      * Instantiates a new Build.
      */
-    public Build() {}
+    public PcBuild() {}
 
     /**
      * Instantiates a new Build.
@@ -56,7 +56,7 @@ public class Build {
      * @param dataStorageId the data storage id
      * @param ramId         the ram id
      */
-    public Build(int buildId, int cpuId, int gpuId, int cpuCoolerId, int motherboardId, int psuId, int caseId, int dataStorageId, int ramId) {
+    public PcBuild(int buildId, int cpuId, int gpuId, int cpuCoolerId, int motherboardId, int psuId, int caseId, int dataStorageId, int ramId) {
         this.buildId = buildId;
         this.cpuId = cpuId;
         this.gpuId = gpuId;

@@ -5,8 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76adffd3-7fdd-4679-af1c-67eb2eeb877d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/15b3b9db-0723-47b8-87bf-37f49e6994ac.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/15b3b9db-0723-47b8-87bf-37f49e6994ac.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/persistence/PcBuildDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/persistence/SessionFactoryProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/persistence/UserDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/f9b995e1-caa1-462a-9636-75d03c2d3cca.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f9b995e1-caa1-462a-9636-75d03c2d3cca.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Build.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/PcBuild.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/CPU.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/CpuCooler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/DataStorage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/GPU.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Motherboard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/PcCase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Psu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Ram.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,14 +56,14 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Frankie/Documents/School/Fall 2022/Enterprise Java/PCHardwareViewer&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Frankie/Documents/School/Fall 2022/Enterprise Java/week-4-hibernate-exercise-fchristian1992/src/main/java/edu/matc/persistence/BookDao.java&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
@@ -58,6 +72,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Frankie\Documents\School\Fall 2022\Enterprise Java\PCHardwareViewer\src\main\java\persistence" />
+    </key>
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="entity" />
     </key>
@@ -79,6 +96,12 @@
       <workItem from="1664815925177" duration="10226000" />
       <workItem from="1664986499862" duration="17861000" />
       <workItem from="1665514964103" duration="254000" />
+      <workItem from="1665515447818" duration="631000" />
+      <workItem from="1665774341722" duration="9925000" />
+      <workItem from="1665959430778" duration="2376000" />
+      <workItem from="1666032467159" duration="10680000" />
+      <workItem from="1666552319429" duration="4965000" />
+      <workItem from="1666562367942" duration="8508000" />
     </task>
     <servers />
   </component>
