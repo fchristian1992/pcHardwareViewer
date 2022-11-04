@@ -1,12 +1,14 @@
 package entity;
 
 import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 
+
 /**
- * The type Build.
+ * The type Pc build.
  */
-@Entity(name = "PC_build")
+@Entity(name = "PcBuild")
 @Table(name = "computer_builds")
 public class PcBuild {
     @Id
@@ -14,58 +16,65 @@ public class PcBuild {
     @GenericGenerator(name = "native", strategy = "native")
     private int buildId;
 
-    @OneToOne(mappedBy = "cpu", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private int cpuId;
+    @Column(name = "cpu_model")
+    private String cpuModel;
 
-    @OneToOne(mappedBy = "gpu", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private int gpuId;
+    @Column(name = "gpu_model")
+    private String gpuModel;
 
-    @OneToOne(mappedBy = "cpu_cooler", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private int cpuCoolerId;
+    @Column(name = "cpu_cooler_model")
+    private String cpuCoolerModel;
 
-    @OneToOne(mappedBy = "motherboard", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private int motherboardId;
+    @Column(name = "Motherboard_model")
+    private String motherboardModel;
 
-    @OneToOne(mappedBy = "psu", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private int psuId;
+    @Column(name = "psu_model")
+    private String psuModel;
 
-    @OneToOne(mappedBy = "pc_case", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private int caseId;
+    @Column(name = "case_model")
+    private String caseModel;
 
-    @OneToOne(mappedBy = "data_storage", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private int dataStorageId;
+    @Column(name = "data_storage_model")
+    private String dataStorageModel;
 
-    @OneToOne(mappedBy = "ram", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private int ramId;
+    @Column(name = "ram_model")
+    private String ramModel;
+
+    @ManyToOne
+    @JoinColumn(name = "userId")
+    private User user;
+
+    public PcBuild() {
+    }
 
     /**
-     * Instantiates a new Build.
-     */
-    public PcBuild() {}
-
-    /**
-     * Instantiates a new Build.
+     * Instantiates a new Pc build.
      *
-     * @param buildId       the build id
-     * @param cpuId         the cpu id
-     * @param gpuId         the gpu id
-     * @param cpuCoolerId   the cpu cooler id
-     * @param motherboardId the motherboard id
-     * @param psuId         the psu id
-     * @param caseId        the case id
-     * @param dataStorageId the data storage id
-     * @param ramId         the ram id
+     * @param buildId          the build id
+     * @param cpuModel         the cpu model
+     * @param gpuModel         the gpu model
+     * @param cpuCoolerModel   the cpu cooler model
+     * @param motherboardModel the motherboard model
+     * @param psuModel         the psu model
+     * @param caseModel        the case model
+     * @param dataStorageModel the data storage model
+     * @param ramModel         the ram model
+     * @param user             a user
      */
-    public PcBuild(int buildId, int cpuId, int gpuId, int cpuCoolerId, int motherboardId, int psuId, int caseId, int dataStorageId, int ramId) {
+    public PcBuild(int buildId, String cpuModel, String gpuModel,
+            String cpuCoolerModel, String motherboardModel, String psuModel,
+            String caseModel, String dataStorageModel, String ramModel,
+            User user) {
         this.buildId = buildId;
-        this.cpuId = cpuId;
-        this.gpuId = gpuId;
-        this.cpuCoolerId = cpuCoolerId;
-        this.motherboardId = motherboardId;
-        this.psuId = psuId;
-        this.caseId = caseId;
-        this.dataStorageId = dataStorageId;
-        this.ramId = ramId;
+        this.cpuModel = cpuModel;
+        this.gpuModel = gpuModel;
+        this.cpuCoolerModel = cpuCoolerModel;
+        this.motherboardModel = motherboardModel;
+        this.psuModel = psuModel;
+        this.caseModel = caseModel;
+        this.dataStorageModel = dataStorageModel;
+        this.ramModel = ramModel;
+        this.user = user;
     }
 
     /**
@@ -87,161 +96,180 @@ public class PcBuild {
     }
 
     /**
-     * Gets cpu id.
+     * Gets cpu model.
      *
-     * @return the cpu id
+     * @return the cpu model
      */
-    public int getCpuId() {
-        return cpuId;
+    public String getCpuModel() {
+        return cpuModel;
     }
 
     /**
-     * Sets cpu id.
+     * Sets cpu model.
      *
-     * @param cpuId the cpu id
+     * @param cpuModel the cpu model
      */
-    public void setCpuId(int cpuId) {
-        this.cpuId = cpuId;
+    public void setCpuModel(String cpuModel) {
+        this.cpuModel = cpuModel;
     }
 
     /**
-     * Gets gpu id.
+     * Gets gpu model.
      *
-     * @return the gpu id
+     * @return the gpu model
      */
-    public int getGpuId() {
-        return gpuId;
+    public String getGpuModel() {
+        return gpuModel;
     }
 
     /**
-     * Sets gpu id.
+     * Sets gpu model.
      *
-     * @param gpuId the gpu id
+     * @param gpuModel the gpu model
      */
-    public void setGpuId(int gpuId) {
-        this.gpuId = gpuId;
+    public void setGpuModel(String gpuModel) {
+        this.gpuModel = gpuModel;
     }
 
     /**
-     * Gets cpu cooler id.
+     * Gets cpu cooler model.
      *
-     * @return the cpu cooler id
+     * @return the cpu cooler model
      */
-    public int getCpuCoolerId() {
-        return cpuCoolerId;
+    public String getCpuCoolerModel() {
+        return cpuCoolerModel;
     }
 
     /**
-     * Sets cpu cooler id.
+     * Sets cpu cooler model.
      *
-     * @param cpuCoolerId the cpu cooler id
+     * @param cpuCoolerModel the cpu cooler model
      */
-    public void setCpuCoolerId(int cpuCoolerId) {
-        this.cpuCoolerId = cpuCoolerId;
+    public void setCpuCoolerModel(String cpuCoolerModel) {
+        this.cpuCoolerModel = cpuCoolerModel;
     }
 
     /**
-     * Gets motherboard id.
+     * Gets motherboard model.
      *
-     * @return the motherboard id
+     * @return the motherboard model
      */
-    public int getMotherboardId() {
-        return motherboardId;
+    public String getMotherboardModel() {
+        return motherboardModel;
     }
 
     /**
-     * Sets motherboard id.
+     * Sets motherboard model.
      *
-     * @param motherboardId the motherboard id
+     * @param motherboardModel the motherboard model
      */
-    public void setMotherboardId(int motherboardId) {
-        this.motherboardId = motherboardId;
+    public void setMotherboardModel(String motherboardModel) {
+        this.motherboardModel = motherboardModel;
     }
 
     /**
-     * Gets psu id.
+     * Gets psu model.
      *
-     * @return the psu id
+     * @return the psu model
      */
-    public int getPsuId() {
-        return psuId;
+    public String getPsuModel() {
+        return psuModel;
     }
 
     /**
-     * Sets psu id.
+     * Sets psu model.
      *
-     * @param psuId the psu id
+     * @param psuModel the psu model
      */
-    public void setPsuId(int psuId) {
-        this.psuId = psuId;
+    public void setPsuModel(String psuModel) {
+        this.psuModel = psuModel;
     }
 
     /**
-     * Gets case id.
+     * Gets case model.
      *
-     * @return the case id
+     * @return the case model
      */
-    public int getCaseId() {
-        return caseId;
+    public String getCase_Model() {
+        return caseModel;
     }
 
     /**
-     * Sets case id.
+     * Sets case model.
      *
-     * @param caseId the case id
+     * @param caseModel the case model
      */
-    public void setCaseId(int caseId) {
-        this.caseId = caseId;
+    public void setCase_Model(String caseModel) {
+        this.caseModel = caseModel;
     }
 
     /**
-     * Gets data storage id.
+     * Gets data storage model.
      *
-     * @return the data storage id
+     * @return the data storage model
      */
-    public int getDataStorageId() {
-        return dataStorageId;
+    public String getDataStorageModel() {
+        return dataStorageModel;
     }
 
     /**
-     * Sets data storage id.
+     * Sets data storage model.
      *
-     * @param dataStorageId the data storage id
+     * @param dataStorageModel the data storage model
      */
-    public void setDataStorageId(int dataStorageId) {
-        this.dataStorageId = dataStorageId;
+    public void setDataStorageModel(String dataStorageModel) {
+        this.dataStorageModel = dataStorageModel;
     }
 
     /**
-     * Gets ram id.
+     * Gets ram model.
      *
-     * @return the ram id
+     * @return the ram model
      */
-    public int getRamId() {
-        return ramId;
+    public String getRamModel() {
+        return ramModel;
     }
 
     /**
-     * Sets ram id.
+     * Sets ram model.
      *
-     * @param ramId the ram id
+     * @param ramModel the ram model
      */
-    public void setRamId(int ramId) {
-        this.ramId = ramId;
+    public void setRamModel(String ramModel) {
+        this.ramModel = ramModel;
+    }
+
+    /**
+     * Gets user.
+     *
+     * @return the user
+     */
+    public User getUser() {
+        return user;
+    }
+
+    /**
+     * Sets user.
+     *
+     * @param user the user
+     */
+    public void setUserId(User user) {
+        this.user = user;
     }
 
     @Override
     public String toString() {
-        return "Build{" +
+        return "PcBuild{" +
                 "buildId=" + buildId +
-                ", cpuId=" + cpuId +
-                ", gpuId=" + gpuId +
-                ", cpuCoolerId=" + cpuCoolerId +
-                ", motherboardId=" + motherboardId +
-                ", psuId=" + psuId +
-                ", caseId=" + caseId +
-                ", dataStorageId=" + dataStorageId +
-                ", ramId=" + ramId +
+                ", cpuModel='" + cpuModel + '\'' +
+                ", gpuModel='" + gpuModel + '\'' +
+                ", cpuCoolerModel='" + cpuCoolerModel + '\'' +
+                ", motherboardModel='" + motherboardModel + '\'' +
+                ", psuModel='" + psuModel + '\'' +
+                ", caseModel='" + caseModel + '\'' +
+                ", dataStorageModel='" + dataStorageModel + '\'' +
+                ", ramModel='" + ramModel + '\'' +
+                ", user=" + user +
                 '}';
     }
 }

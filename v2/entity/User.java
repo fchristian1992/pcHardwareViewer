@@ -1,17 +1,15 @@
 package entity;
 
 import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * The type User.
  */
 @Entity(name = "User")
 @Table(name = "users")
-public class User {
+public
+class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
@@ -23,14 +21,10 @@ public class User {
     @Column(name = "password")
     private String password;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private Set<PcBuild> pcBuilds = new HashSet<>();
+    @OneToOne(mappedBy = "builds", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private int buildId;
 
-    /**
-     * Instantiates a new User.
-     */
-    public User() {
-    }
+    public User() {}
 
     /**
      * Instantiates a new User.
@@ -38,31 +32,13 @@ public class User {
      * @param userId   the user id
      * @param username the username
      * @param password the password
-     * @param pcBuilds the pc builds
+     * @param buildId  the build id
      */
-    public User(int userId, String username, String password, Set<PcBuild> pcBuilds) {
+    public User(int userId, String username, String password, int buildId) {
         this.userId = userId;
         this.username = username;
         this.password = password;
-        this.pcBuilds = pcBuilds;
-    }
-
-    /**
-     * Gets user id.
-     *
-     * @return the user id
-     */
-    public int getUserId() {
-        return userId;
-    }
-
-    /**
-     * Sets user id.
-     *
-     * @param userId the user id
-     */
-    public void setUserId(int userId) {
-        this.userId = userId;
+        this.buildId = buildId;
     }
 
     /**
@@ -101,29 +77,10 @@ public class User {
         this.password = password;
     }
 
-    /**
-     * Gets pc builds.
-     *
-     * @return the pc builds
-     */
-    public Set<PcBuild> getPcBuilds() {
-        return pcBuilds;
-    }
-
-    /**
-     * Sets pc builds.
-     *
-     * @param pcBuilds the pc builds
-     */
-    public void setPcBuilds(Set<PcBuild> pcBuilds) {
-        this.pcBuilds = pcBuilds;
-    }
-
-    @Override
-    public String toString() {
+    @java.lang.Override
+    public java.lang.String toString() {
         return "User{" +
-                "userId=" + userId +
-                ", username='" + username + '\'' +
+                "username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 '}';
     }

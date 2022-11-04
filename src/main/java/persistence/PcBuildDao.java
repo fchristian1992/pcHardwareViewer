@@ -1,10 +1,5 @@
 package persistence;
 
-import jakarta.persistence.criteria.CriteriaBuilder;
-import jakarta.persistence.criteria.CriteriaQuery;
-import jakarta.persistence.criteria.Expression;
-import jakarta.persistence.criteria.Root;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -19,9 +14,6 @@ import entity.PcBuild;
  */
 public class PcBuildDao {
     private final Logger logger = LogManager.getLogger(this.getClass());
-    /**
-     * The Session factory.
-     */
     SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
 
     /**
@@ -32,12 +24,7 @@ public class PcBuildDao {
      */
     public PcBuild getById(int id) {
         Session session = sessionFactory.openSession();
-        CriteriaBuilder builder = session.getCriteriaBuilder();
-        CriteriaQuery<PcBuild> query = builder.createQuery(PcBuild.class);
-        Root<PcBuild> root = query.from(PcBuild.class);
-        Expression<String> propertyPath = root.get("id");
-        query.where(builder.equal(propertyPath, id));
-        PcBuild pcBuild = session.createQuery(query).getSingleResult();
+        PcBuild pcBuild = session.get(PcBuild.class, id);
         session.close();
         return pcBuild;
     }

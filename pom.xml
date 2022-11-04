@@ -1,118 +1,109 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
-  <link type="text/css" rel="stylesheet" id="dark-mode-custom-link"/>
-  <link type="text/css" rel="stylesheet" id="dark-mode-general-link"/>
-  <style lang="en" type="text/css" id="dark-mode-custom-style"/>
-  <style lang="en" type="text/css" id="dark-mode-native-style"/>
-  <style lang="en" type="text/css" id="dark-mode-native-sheet"/>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>edu.matc.entjava.yourindieproject</groupId>
-  <artifactId>yourindieproject</artifactId>
+  <groupId>edu.matc.entjava.hardwareviewer</groupId>
+  <artifactId>hardwareviewer</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>YourIndieProject Maven Webapp</name>
+  <name>hardwareviewer Maven Webapp</name>
   <url>https://maven.apache.org</url>
   <properties>
     <maven.compiler.release>11</maven.compiler.release>
-    <junit.version>4.13.2</junit.version>
-    <junit-vintage-version>5.9.0</junit-vintage-version>
-    <javax.version>8.0.1</javax.version>
-    <mysql-version>8.0.28</mysql-version>
+
+    <javax.version>7.0</javax.version>
+    <mysql-version>8.0.16</mysql-version>
     <jstl-version>1.2</jstl-version>
-    <log4j-version>2.19.0</log4j-version>
-    <jupiter-version>5.9.0</jupiter-version>
-    <junit-platform-runner-version>1.9.0</junit-platform-runner-version>
+    <log4j-version>2.10.0</log4j-version>
+    <jupiter-version>5.0.0</jupiter-version>
+    <junit.version>4.12</junit.version>
+    <junit-platform-runner-version>1.0.0</junit-platform-runner-version>
+    <junit-vintage-version>4.12.0</junit-vintage-version>
+    <hibernate-core-version>5.4.4.Final</hibernate-core-version>
+    <hibernate-c3p0-version>5.4.4.Final</hibernate-c3p0-version>
+
+    <javb-api.version>2.3.1</javb-api.version>
+
     <maven-compiler-plugin-version>3.8.1</maven-compiler-plugin-version>
     <maven-surefire-plugin-version>2.19</maven-surefire-plugin-version>
-    <hibernate-core-version>6.1.4.Final</hibernate-core-version>
-    <hibernate-c3p0-version>6.1.4.Final</hibernate-c3p0-version>
-    <javax-persistence-version>2.2</javax-persistence-version>
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>org.junit.platform</groupId>
-      <artifactId>junit-platform-runner</artifactId>
-      <version>${junit-platform-runner-version}</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.junit.vintage</groupId>
-      <artifactId>junit-vintage-engine</artifactId>
-      <version>${junit-vintage-version}</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-engine</artifactId>
-      <version>${jupiter-version}</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>${junit.version}</version>
-      <scope>test</scope>
-    </dependency>
-
     <dependency>
       <groupId>javax</groupId>
       <artifactId>javaee-web-api</artifactId>
       <version>${javax.version}</version>
     </dependency>
-
-    <!-- https://mvnrepository.com/artifact/javax.persistence/javax.persistence-api -->
-    <dependency>
-      <groupId>javax.persistence</groupId>
-      <artifactId>javax.persistence-api</artifactId>
-      <version>${javax-persistence-version}</version>
-    </dependency>
-
     <!--  https://mvnrepository.com/artifact/mysql/mysql-connector-java  -->
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
       <version>${mysql-version}</version>
     </dependency>
-
     <dependency>
       <groupId>jstl</groupId>
       <artifactId>jstl</artifactId>
       <version>${jstl-version}</version>
     </dependency>
-
-    <!--  next 2 dependencies are for log4j  -->
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-api</artifactId>
       <version>${log4j-version}</version>
     </dependency>
-
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-core</artifactId>
       <version>${log4j-version}</version>
     </dependency>
-
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>${jupiter-version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.platform</groupId>
+      <artifactId>junit-platform-runner</artifactId>
+      <version>${junit-platform-runner-version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.vintage</groupId>
+      <artifactId>junit-vintage-engine</artifactId>
+      <version>${junit-vintage-version}</version>
+      <scope>test</scope>
+    </dependency>
     <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
       <version>${hibernate-core-version}</version>
     </dependency>
-
     <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0 -->
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-c3p0</artifactId>
       <version>${hibernate-c3p0-version}</version>
     </dependency>
+
+
+
+    <!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+    <dependency>
+      <groupId>javax.xml.bind</groupId>
+      <artifactId>jaxb-api</artifactId>
+      <version>${javb-api.version}</version>
+    </dependency>
+
   </dependencies>
 
   <build>
-    <finalName>YourIndieProject</finalName>
+    <finalName>hardwareviewer</finalName>
 
     <pluginManagement>
       <plugins>
@@ -120,6 +111,33 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>${maven-compiler-plugin-version}</version>
+          <configuration>
+            <source>1.8</source>
+            <target>1.8</target>
+          </configuration>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>2.3</version>
+          <configuration>
+            <encoding>UTF-8</encoding>
+          </configuration>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-war-plugin</artifactId>
+          <configuration>
+            <webResources>
+              <resource>
+                <directory>src/main/webapp/META-INF</directory>
+                <filtering>true</filtering>
+                <targetPath>META-INF</targetPath>
+              </resource>
+            </webResources>
+          </configuration>
         </plugin>
 
         <plugin>
