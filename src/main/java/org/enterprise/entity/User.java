@@ -1,4 +1,4 @@
-package entity;
+package org.enterprise.entity;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -35,16 +35,12 @@ public class User {
     /**
      * Instantiates a new User.
      *
-     * @param userId   the user id
      * @param username the username
      * @param password the password
-     * @param pcBuilds the pc builds
      */
-    public User(int userId, String username, String password, Set<PcBuild> pcBuilds) {
-        this.userId = userId;
+    public User(String username, String password) {
         this.username = username;
         this.password = password;
-        this.pcBuilds = pcBuilds;
     }
 
     /**

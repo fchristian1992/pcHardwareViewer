@@ -1,13 +1,11 @@
-package persistence;
+package org.enterprise.persistence;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import entity.PcBuild;
+import org.enterprise.entity.PcBuild;
 
 /**
  * The type Pc build dao.

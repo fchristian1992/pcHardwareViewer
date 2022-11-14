@@ -5,26 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76adffd3-7fdd-4679-af1c-67eb2eeb877d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/persistence/PcBuildDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/util/Database.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/util/PropertiesLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Database.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/cleandb.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/15b3b9db-0723-47b8-87bf-37f49e6994ac.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/15b3b9db-0723-47b8-87bf-37f49e6994ac.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PCHardwareViewer.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/enterprise/persistence/UserDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/f9b995e1-caa1-462a-9636-75d03c2d3cca.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f9b995e1-caa1-462a-9636-75d03c2d3cca.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PCHardwareViewer.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/designDocuments/self-eval.md" beforeDir="false" afterPath="$PROJECT_DIR$/designDocuments/self-eval.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/PcBuild.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/PcBuild.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/PcBuildDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/PcBuildDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/PcBuild.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/entity/PcBuild.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/PcBuildDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/SessionFactoryProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/UserDao.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/persistence/PcBuildDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/enterprise/persistence/PcBuildDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/util/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/enterprise/util/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/util/PropertiesLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/enterprise/util/PropertiesLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/cleandb.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/cleandb.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entity/PcBuild.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/persistence/PcBuildDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/persistence/SessionFactoryProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/persistence/UserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cleandb.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/cleandb.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/persistence/PcBuildDaoTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/util/Database.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/util/PropertiesLoader.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +66,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;JPA.DatabaseSchemaImportDialog&quot;: &quot;f9b995e1-caa1-462a-9636-75d03c2d3cca&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -64,7 +75,7 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Frankie/Documents/School/Fall 2022/Enterprise Java/PCHardwareViewer/src/test/resources&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Frankie/Documents/School/Fall 2022/Enterprise Java/PCHardwareViewer/src/test/resources/cleandb.sql&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -108,39 +119,70 @@
       <recent name="entity" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PcBuildDaoTest.getById">
+  <component name="RunManager" selected="JUnit.UserDaoTest.deleteTest">
     <configuration name="cleandb.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/src/test/resources/cleandb.sql" />
       <script-mode>FILE</script-mode>
       <method v="2" />
     </configuration>
-    <configuration name="PcBuildDaoTest.getById (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PCHardwareViewer" />
+    <configuration name="PcBuildDaoTest.deleteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hardwareviewer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="entity.*" />
+          <option name="PATTERN" value="org.enterprise.persistence.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="entity" />
-      <option name="MAIN_CLASS_NAME" value="entity.PcBuildDaoTest" />
-      <option name="METHOD_NAME" value="getById" />
+      <option name="PACKAGE_NAME" value="org.enterprise.persistence" />
+      <option name="MAIN_CLASS_NAME" value="org.enterprise.persistence.PcBuildDaoTest" />
+      <option name="METHOD_NAME" value="deleteTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PcBuildDaoTest.getById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PCHardwareViewer" />
+    <configuration name="UserDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hardwareviewer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="persistence.*" />
+          <option name="PATTERN" value="org.enterprise.persistence.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="persistence" />
-      <option name="MAIN_CLASS_NAME" value="persistence.PcBuildDaoTest" />
-      <option name="METHOD_NAME" value="getById" />
+      <option name="PACKAGE_NAME" value="org.enterprise.persistence" />
+      <option name="MAIN_CLASS_NAME" value="org.enterprise.persistence.UserDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserDaoTest.deleteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hardwareviewer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.enterprise.persistence.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.enterprise.persistence" />
+      <option name="MAIN_CLASS_NAME" value="org.enterprise.persistence.UserDaoTest" />
+      <option name="METHOD_NAME" value="deleteTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserDaoTest.insertUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hardwareviewer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.enterprise.persistence.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.enterprise.persistence" />
+      <option name="MAIN_CLASS_NAME" value="org.enterprise.persistence.UserDaoTest" />
+      <option name="METHOD_NAME" value="insertUserTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -148,9 +190,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PcBuildDaoTest.getById" />
+        <item itemvalue="JUnit.UserDaoTest.deleteTest" />
+        <item itemvalue="JUnit.PcBuildDaoTest.deleteTest" />
         <item itemvalue="Database Script.cleandb.sql" />
-        <item itemvalue="JUnit.PcBuildDaoTest.getById (1)" />
+        <item itemvalue="JUnit.UserDaoTest" />
+        <item itemvalue="JUnit.UserDaoTest.insertUserTest" />
       </list>
     </recent_temporary>
   </component>
@@ -185,7 +229,27 @@
       <workItem from="1667157778373" duration="10413000" />
       <workItem from="1667322924175" duration="11509000" />
       <workItem from="1667504006811" duration="2528000" />
-      <workItem from="1667519526395" duration="403000" />
+      <workItem from="1667519526395" duration="2912000" />
+      <workItem from="1667763504630" duration="182000" />
+      <workItem from="1667767175107" duration="6000" />
+      <workItem from="1667767249250" duration="30000" />
+      <workItem from="1667843887922" duration="1718000" />
+      <workItem from="1667851248448" duration="1242000" />
+      <workItem from="1668018292283" duration="5077000" />
+      <workItem from="1668101435233" duration="216000" />
+      <workItem from="1668101695099" duration="1044000" />
+      <workItem from="1668102767125" duration="598000" />
+      <workItem from="1668107853544" duration="15000" />
+      <workItem from="1668107901570" duration="16000" />
+      <workItem from="1668108015947" duration="187000" />
+      <workItem from="1668108275777" duration="24000" />
+      <workItem from="1668108321795" duration="17000" />
+      <workItem from="1668108381577" duration="11000" />
+      <workItem from="1668108761103" duration="334000" />
+      <workItem from="1668113454069" duration="14000" />
+      <workItem from="1668187065308" duration="5015000" />
+      <workItem from="1668364231081" duration="4305000" />
+      <workItem from="1668369111881" duration="6553000" />
     </task>
     <servers />
   </component>
@@ -207,5 +271,17 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint enabled="true" type="java-exception" />
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/PCHardwareViewer$PcBuildDaoTest.ic" NAME="PcBuildDaoTest Coverage Results" MODIFIED="1668378052130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.enterprise.persistence.*</FILTER>
+    </SUITE>
   </component>
 </project>

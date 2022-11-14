@@ -1,4 +1,4 @@
-package persistence;
+package org.enterprise.persistence;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
@@ -12,7 +12,7 @@ import org.hibernate.Transaction;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import entity.User;
+import org.enterprise.entity.User;
 
 
 
@@ -34,7 +34,7 @@ public class UserDao {
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<User> query = builder.createQuery(User.class);
         Root<User> root = query.from(User.class);
-        Expression<String> propertyPath = root.get("id");
+        Expression<String> propertyPath = root.get("userId");
         query.where(builder.equal(propertyPath, id));
         User user = session.createQuery(query).getSingleResult();
         session.close();

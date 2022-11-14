@@ -1,4 +1,4 @@
-package util;
+package org.enterprise.util;
 
 import java.io.IOException;
 import java.util.Properties;

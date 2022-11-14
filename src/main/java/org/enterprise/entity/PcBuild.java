@@ -1,9 +1,7 @@
-package entity;
+package org.enterprise.entity;
 
 import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
-
 
 /**
  * The type Pc build.
@@ -41,7 +39,7 @@ public class PcBuild {
     private String ramModel;
 
     @ManyToOne
-    @JoinColumn(name = "userId")
+    @JoinColumn(name = "userId", referencedColumnName = "userId")
     private User user;
 
     public PcBuild() {
@@ -50,7 +48,6 @@ public class PcBuild {
     /**
      * Instantiates a new Pc build.
      *
-     * @param buildId          the build id
      * @param cpuModel         the cpu model
      * @param gpuModel         the gpu model
      * @param cpuCoolerModel   the cpu cooler model
@@ -59,13 +56,11 @@ public class PcBuild {
      * @param caseModel        the case model
      * @param dataStorageModel the data storage model
      * @param ramModel         the ram model
-     * @param user             a user
+     * @param user             the user
      */
-    public PcBuild(int buildId, String cpuModel, String gpuModel,
-            String cpuCoolerModel, String motherboardModel, String psuModel,
-            String caseModel, String dataStorageModel, String ramModel,
-            User user) {
-        this.buildId = buildId;
+    public PcBuild(String cpuModel, String gpuModel, String cpuCoolerModel,
+            String motherboardModel, String psuModel, String caseModel,
+            String dataStorageModel, String ramModel, User user) {
         this.cpuModel = cpuModel;
         this.gpuModel = gpuModel;
         this.cpuCoolerModel = cpuCoolerModel;
