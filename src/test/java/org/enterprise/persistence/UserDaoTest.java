@@ -44,8 +44,8 @@ public class UserDaoTest {
 
     @Test
     void deleteTest() {
-        dao.delete(dao.getById(1));
-        assertNull(dao.getById(1));
+        dao.delete(dao.getById(2));
+        assertNull(dao.getById(2));
 
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");

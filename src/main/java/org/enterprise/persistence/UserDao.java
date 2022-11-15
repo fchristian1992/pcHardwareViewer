@@ -5,6 +5,7 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Expression;
 import javax.persistence.criteria.Root;
 
+import org.enterprise.entity.PcBuild;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -31,12 +32,7 @@ public class UserDao {
      */
     public User getById(int id) {
         Session session = sessionFactory.openSession();
-        CriteriaBuilder builder = session.getCriteriaBuilder();
-        CriteriaQuery<User> query = builder.createQuery(User.class);
-        Root<User> root = query.from(User.class);
-        Expression<String> propertyPath = root.get("userId");
-        query.where(builder.equal(propertyPath, id));
-        User user = session.createQuery(query).getSingleResult();
+        User user = session.get(User.class, id);
         session.close();
         return user;
     }

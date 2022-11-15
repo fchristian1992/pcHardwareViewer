@@ -6,6 +6,8 @@ insert into users (userId, username, password) VALUES (1, 'fchristian', 'student
 
 insert into users (userId, username, password) VALUES (2, 'achristian', 'lollipop');
 
+insert into users (userId, username, password) values (3, 'CChristian', 'pugs');
+
 insert into computer_builds (buildId, cpu_model, gpu_model, cpu_cooler_model, motherboard_model, psu_model, case_model,
                              data_storage_model, ram_model, userId)
 values (1, 'Ryzen 7 5800X3D', 'PowerColor Red Devil OC Radeon RX 6950 XT', 'Deepcool AK620', 'MSI MAG B550 Tomahawk',
