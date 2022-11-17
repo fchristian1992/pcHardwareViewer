@@ -1,9 +1,9 @@
 package org.enterprise.entity;
 
 import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 /**
@@ -39,6 +39,19 @@ public class User {
      * @param password the password
      */
     public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    /**
+     * Instantiates a new User.
+     *
+     * @param userId   the user id
+     * @param username the username
+     * @param password the password
+     */
+    public User(int userId, String username, String password) {
+        this.userId = userId;
         this.username = username;
         this.password = password;
     }
@@ -122,5 +135,20 @@ public class User {
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return userId == user.userId
+                && Objects.equals(username, user.username)
+                && Objects.equals(password, user.password);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(userId, username, password);
     }
 }

@@ -2,6 +2,7 @@ package org.enterprise.entity;
 
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
+import java.util.Objects;
 
 /**
  * The type Pc build.
@@ -266,5 +267,28 @@ public class PcBuild {
                 ", ramModel='" + ramModel + '\'' +
                 ", user=" + user +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PcBuild pcBuild = (PcBuild) o;
+        return buildId == pcBuild.buildId
+                && Objects.equals(cpuModel, pcBuild.cpuModel)
+                && Objects.equals(gpuModel, pcBuild.gpuModel)
+                && Objects.equals(cpuCoolerModel, pcBuild.cpuCoolerModel)
+                && Objects.equals(motherboardModel, pcBuild.motherboardModel)
+                && Objects.equals(psuModel, pcBuild.psuModel)
+                && Objects.equals(caseModel, pcBuild.caseModel)
+                && Objects.equals(dataStorageModel, pcBuild.dataStorageModel)
+                && Objects.equals(ramModel, pcBuild.ramModel);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(buildId, cpuModel, gpuModel, cpuCoolerModel,
+                motherboardModel, psuModel, caseModel, dataStorageModel,
+                ramModel);
     }
 }

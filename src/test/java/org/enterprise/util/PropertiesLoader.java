@@ -4,31 +4,27 @@ import java.io.IOException;
 import java.util.Properties;
 
 /**
+ * This interface contains a default method that can be used anywhere a
+ * Properties object is needed to be loaded.
  * @author Eric Knapp
  *
  */
 public interface PropertiesLoader {
     /**
-     * Loads and returns the properties from a given file path
+     * This default method will load a properties file into a Properties
+     * instance and return it.
      *
-     * @param propertiesFilePath file path of the properties file
-     * @return Properties for the given file path
-     * @throws IOException if an error occured when reading from the input stream
+     * @param propertiesFilePath a path to a file on the java classpath list
+     * @return a populated Properties instance or an empty Properties instance
+     *         if the file path was not found.
+     * @throws IOException properties file cannot be read
+     * @throws Exception something went wrong accessing the properties file
      */
     default Properties loadProperties(String propertiesFilePath)
-            throws Exception {
+            throws IOException, Exception {
         Properties properties = new Properties();
 
-        try {
-            properties.load(this.getClass().getResourceAsStream(propertiesFilePath));
-        } catch (IOException ioException) {
-            ioException.printStackTrace();
-            throw ioException;
-        } catch (Exception exception) {
-            exception.printStackTrace();
-            throw exception;
-        }
-
+        properties.load(this.getClass().getResourceAsStream(propertiesFilePath));
         return properties;
     }
 }

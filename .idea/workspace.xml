@@ -5,12 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76adffd3-7fdd-4679-af1c-67eb2eeb877d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/persistence/GenericDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f9b995e1-caa1-462a-9636-75d03c2d3cca.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f9b995e1-caa1-462a-9636-75d03c2d3cca/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f9b995e1-caa1-462a-9636-75d03c2d3cca/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f9b995e1-caa1-462a-9636-75d03c2d3cca/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f9b995e1-caa1-462a-9636-75d03c2d3cca/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/enterprise/persistence/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/persistence/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/designDocuments/db concept.drawio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/enterprise/entity/PcBuild.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/entity/PcBuild.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/enterprise/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/enterprise/persistence/PcBuildDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/enterprise/persistence/UserDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/enterprise/persistence/PcBuildDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/enterprise/persistence/PcBuildDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/enterprise/persistence/UserDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/enterprise/persistence/UserDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/cleandb.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/cleandb.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/enterprise/util/PropertiesLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/enterprise/util/PropertiesLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/enterprise/entity/PcBuild.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/enterprise/entity/PcBuild.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/enterprise/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/enterprise/entity/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/enterprise/persistence/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/enterprise/persistence/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/cleandb.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/cleandb.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/enterprise/persistence/PcBuildDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/enterprise/persistence/PcBuildDaoTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/org/enterprise/persistence/UserDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/enterprise/persistence/UserDaoTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +80,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
@@ -98,13 +113,11 @@
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="entity" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunManager" selected="JUnit.PcBuildDaoTest">
-    <configuration name="cleandb.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
-      <script-file value="$PROJECT_DIR$/src/test/resources/cleandb.sql" />
-      <script-mode>FILE</script-mode>
-      <method v="2" />
-    </configuration>
     <configuration name="PcBuildDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hardwareviewer" />
       <extension name="coverage">
@@ -120,7 +133,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PcBuildDaoTest.deleteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PcBuildDaoTest.saveOrUpdatePcBuildTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hardwareviewer" />
       <extension name="coverage">
         <pattern>
@@ -130,7 +143,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.enterprise.persistence" />
       <option name="MAIN_CLASS_NAME" value="org.enterprise.persistence.PcBuildDaoTest" />
-      <option name="METHOD_NAME" value="deleteTest" />
+      <option name="METHOD_NAME" value="saveOrUpdatePcBuildTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -151,7 +164,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDaoTest.deleteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserDaoTest.getByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hardwareviewer" />
       <extension name="coverage">
         <pattern>
@@ -161,7 +174,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.enterprise.persistence" />
       <option name="MAIN_CLASS_NAME" value="org.enterprise.persistence.UserDaoTest" />
-      <option name="METHOD_NAME" value="deleteTest" />
+      <option name="METHOD_NAME" value="getByIdTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserDaoTest.saveOrUpdateUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hardwareviewer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.enterprise.persistence.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.enterprise.persistence" />
+      <option name="MAIN_CLASS_NAME" value="org.enterprise.persistence.UserDaoTest" />
+      <option name="METHOD_NAME" value="saveOrUpdateUserTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -171,9 +200,9 @@
       <list>
         <item itemvalue="JUnit.PcBuildDaoTest" />
         <item itemvalue="JUnit.UserDaoTest" />
-        <item itemvalue="JUnit.UserDaoTest.deleteTest" />
-        <item itemvalue="JUnit.PcBuildDaoTest.deleteTest" />
-        <item itemvalue="Database Script.cleandb.sql" />
+        <item itemvalue="JUnit.PcBuildDaoTest.saveOrUpdatePcBuildTest" />
+        <item itemvalue="JUnit.UserDaoTest.getByIdTest" />
+        <item itemvalue="JUnit.UserDaoTest.saveOrUpdateUserTest" />
       </list>
     </recent_temporary>
   </component>
@@ -230,6 +259,12 @@
       <workItem from="1668364231081" duration="4305000" />
       <workItem from="1668369111881" duration="6553000" />
       <workItem from="1668447301565" duration="5012000" />
+      <workItem from="1668535665516" duration="913000" />
+      <workItem from="1668545118622" duration="3148000" />
+      <workItem from="1668620873895" duration="4652000" />
+      <workItem from="1668712138460" duration="7625000" />
+      <workItem from="1668720815664" duration="168000" />
+      <workItem from="1668720998354" duration="649000" />
     </task>
     <servers />
   </component>
@@ -260,10 +295,10 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/PCHardwareViewer$UserDaoTest.ic" NAME="UserDaoTest Coverage Results" MODIFIED="1668466499968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/PCHardwareViewer$UserDaoTest.ic" NAME="UserDaoTest Coverage Results" MODIFIED="1668719763338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.enterprise.persistence.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/PCHardwareViewer$PcBuildDaoTest.ic" NAME="PcBuildDaoTest Coverage Results" MODIFIED="1668466529715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/PCHardwareViewer$PcBuildDaoTest.ic" NAME="PcBuildDaoTest Coverage Results" MODIFIED="1668719877201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.enterprise.persistence.*</FILTER>
     </SUITE>
   </component>
