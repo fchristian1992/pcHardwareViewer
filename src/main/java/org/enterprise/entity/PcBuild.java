@@ -186,7 +186,7 @@ public class PcBuild {
      *
      * @return the case model
      */
-    public String getCase_Model() {
+    public String getCaseModel() {
         return caseModel;
     }
 
@@ -195,7 +195,7 @@ public class PcBuild {
      *
      * @param caseModel the case model
      */
-    public void setCase_Model(String caseModel) {
+    public void setCaseModel(String caseModel) {
         this.caseModel = caseModel;
     }
 

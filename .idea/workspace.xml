@@ -5,28 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76adffd3-7fdd-4679-af1c-67eb2eeb877d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/persistence/GenericDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/restful/HardwareViewerRestful.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/restful/HardwareViewerRestfulSpecs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/service/PcBuildApiService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/service/UserApiService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f9b995e1-caa1-462a-9636-75d03c2d3cca.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f9b995e1-caa1-462a-9636-75d03c2d3cca/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f9b995e1-caa1-462a-9636-75d03c2d3cca/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f9b995e1-caa1-462a-9636-75d03c2d3cca/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f9b995e1-caa1-462a-9636-75d03c2d3cca/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/designDocuments/db concept.drawio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/enterprise/entity/PcBuild.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/entity/PcBuild.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/enterprise/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/enterprise/persistence/PcBuildDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/enterprise/persistence/UserDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/enterprise/persistence/PcBuildDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/enterprise/persistence/PcBuildDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/enterprise/persistence/UserDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/enterprise/persistence/UserDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/enterprise/util/PropertiesLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/enterprise/util/PropertiesLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/enterprise/entity/PcBuild.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/enterprise/entity/PcBuild.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/enterprise/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/enterprise/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/enterprise/persistence/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/enterprise/persistence/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/enterprise/persistence/GenericDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/enterprise/persistence/GenericDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/enterprise/persistence/PcBuildDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/enterprise/persistence/UserDao.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/org/enterprise/persistence/PcBuildDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/enterprise/persistence/PcBuildDaoTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/org/enterprise/persistence/UserDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/enterprise/persistence/UserDaoTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/enterprise/util/PropertiesLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/enterprise/util/PropertiesLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/v2/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,38 +54,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;JPA.DatabaseSchemaImportDialog&quot;: &quot;f9b995e1-caa1-462a-9636-75d03c2d3cca&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Frankie/Documents/School/Fall 2022/Enterprise Java/PCHardwareViewer/src/test/resources/cleandb.sql&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Facets&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "JPA.DatabaseSchemaImportDialog": "f9b995e1-caa1-462a-9636-75d03c2d3cca",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "last_opened_file_path": "C:/Users/Frankie/Documents/School/Fall 2022/Enterprise Java/PCHardwareViewer",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Facets",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.general"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ],
-    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/&quot;: [
-      &quot;MySQL&quot;
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
+      "MySQL"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Frankie\Documents\School\Fall 2022\Enterprise Java\PCHardwareViewer\src\test\resources" />
@@ -264,7 +259,11 @@
       <workItem from="1668620873895" duration="4652000" />
       <workItem from="1668712138460" duration="7625000" />
       <workItem from="1668720815664" duration="168000" />
-      <workItem from="1668720998354" duration="649000" />
+      <workItem from="1668720998354" duration="3036000" />
+      <workItem from="1668807600792" duration="2061000" />
+      <workItem from="1668885532734" duration="2053000" />
+      <workItem from="1668976365136" duration="1230000" />
+      <workItem from="1669319637827" duration="17111000" />
     </task>
     <servers />
   </component>
