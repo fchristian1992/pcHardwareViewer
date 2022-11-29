@@ -9,6 +9,7 @@ import org.enterprise.persistence.GenericDao;
 
 public class UserApiService {
     private final Logger logger = LogManager.getLogger(this.getClass());
+    ObjectMapper mapper = new ObjectMapper();
 
     /**
      * Create a new user.
@@ -23,18 +24,18 @@ public class UserApiService {
         User newUser = new User(username, password);
 
         // Create a new userDao.
-        GenericDao<User> userDao = new GenericDao(User.class);
+        GenericDao<User> userDao = new GenericDao<>(User.class);
 
         // Insert the new user into the database.
         userDao.insert(newUser);
 
         logger.debug("Sending back new user info: " + newUser);
 
-        ObjectMapper mapper = new ObjectMapper();
         String json = null;
 
         try {
             json = mapper.writeValueAsString(newUser);
+
             logger.debug("ResultingJSONstring = " + json);
         } catch (JsonProcessingException e) {
             logger.error("JSON Processing Exception: " + e);
@@ -51,18 +52,18 @@ public class UserApiService {
      * @return the user with the given id.
      */
     public String getSpecificUser(int userId) {
-        GenericDao<User> userDao = new GenericDao(User.class);
+        GenericDao<User> userDao = new GenericDao<>(User.class);
 
         // Populate a user with user info from the database by a given id.
         User user = userDao.getById(userId);
 
         logger.debug("Sending back user with id " + userId + "..." + user);
 
-        ObjectMapper mapper = new ObjectMapper();
         String json = null;
 
         try {
             json = mapper.writeValueAsString(user);
+
             logger.debug("ResultingJSONstring = " + json);
 
         } catch (JsonProcessingException e) {
@@ -83,7 +84,7 @@ public class UserApiService {
      */
     public String updateUser(int userId, String username, String password) {
         // Create a new userDao.
-        GenericDao<User> userDao = new GenericDao(User.class);
+        GenericDao<User> userDao = new GenericDao<>(User.class);
 
         // Get the user object by the given id.
         User user = userDao.getById(userId);
@@ -103,13 +104,12 @@ public class UserApiService {
 
         logger.debug("Sending back updated user info: " + user);
 
-        ObjectMapper mapper = new ObjectMapper();
         String json = null;
 
         try {
             json = mapper.writeValueAsString(user);
-            logger.debug("ResultingJSONstring = " + json);
 
+            logger.debug("ResultingJSONstring = " + json);
         } catch (JsonProcessingException e) {
             logger.error("JSON Processing Exception: " + e);
         }
@@ -126,7 +126,7 @@ public class UserApiService {
      */
     public String deleteUser(int userId) {
         // Create a new userDao.
-        GenericDao<User> userDao = new GenericDao(User.class);
+        GenericDao<User> userDao = new GenericDao<>(User.class);
 
         // Get the user object by the given id.
         User user = userDao.getById(userId);
@@ -136,11 +136,11 @@ public class UserApiService {
 
         logger.debug("Sending back deleted user info: " + user);
 
-        ObjectMapper mapper = new ObjectMapper();
         String json = null;
 
         try {
             json = mapper.writeValueAsString(user);
+
             logger.debug("ResultingJSONstring = " + json);
 
         } catch (JsonProcessingException e) {
