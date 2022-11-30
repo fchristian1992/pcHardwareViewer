@@ -37,7 +37,7 @@ public class UserApiService {
             json = mapper.writeValueAsString(newUser);
 
             logger.debug("ResultingJSONstring = " + json);
-        } catch (JsonProcessingException e) {
+        } catch(JsonProcessingException e) {
             logger.error("JSON Processing Exception: " + e);
         }
 
@@ -66,7 +66,7 @@ public class UserApiService {
 
             logger.debug("ResultingJSONstring = " + json);
 
-        } catch (JsonProcessingException e) {
+        } catch(JsonProcessingException e) {
             logger.error("JSON Processing Exception: " + e);
         }
 
@@ -91,11 +91,11 @@ public class UserApiService {
 
         // Update the user object with the new information.
         // If an entry is null, then don't update it.
-        if (username != null) {
+        if(username != null) {
             user.setUsername(username);
         }
 
-        if (password != null) {
+        if(password != null) {
             user.setPassword(password);
         }
 
@@ -110,7 +110,7 @@ public class UserApiService {
             json = mapper.writeValueAsString(user);
 
             logger.debug("ResultingJSONstring = " + json);
-        } catch (JsonProcessingException e) {
+        } catch(JsonProcessingException e) {
             logger.error("JSON Processing Exception: " + e);
         }
 
@@ -143,7 +143,7 @@ public class UserApiService {
 
             logger.debug("ResultingJSONstring = " + json);
 
-        } catch (JsonProcessingException e) {
+        } catch(JsonProcessingException e) {
             logger.error("JSON Processing Exception: " + e);
         }
 

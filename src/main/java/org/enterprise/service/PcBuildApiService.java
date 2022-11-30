@@ -46,7 +46,7 @@ public class PcBuildApiService {
             json = mapper.writeValueAsString(newBuild);
 
             logger.debug("ResultingJSONstring = " + json);
-        } catch (JsonProcessingException e) {
+        } catch(JsonProcessingException e) {
             logger.error("JSON Processing Exception: " + e);
         }
 
@@ -76,7 +76,7 @@ public class PcBuildApiService {
             json = mapper.writeValueAsString(retrievedPcBuild);
 
             logger.debug("ResultingJSONstring = " + json);
-        } catch (JsonProcessingException e) {
+        } catch(JsonProcessingException e) {
             logger.error("JSON Processing Exception: " + e);
         }
 
@@ -109,28 +109,28 @@ public class PcBuildApiService {
 
         // Set the new values for the PC build.
         // If the value is null, then don't change it.
-        if (cpuModel != null) {
+        if(cpuModel != null) {
             pcBuildToBeUpdated.setCpuModel(cpuModel);
         }
-        if (gpuModel != null) {
+        if(gpuModel != null) {
             pcBuildToBeUpdated.setGpuModel(gpuModel);
         }
-        if (cpuCoolerModel != null) {
+        if(cpuCoolerModel != null) {
             pcBuildToBeUpdated.setCpuCoolerModel(cpuCoolerModel);
         }
-        if (motherboardModel != null) {
+        if(motherboardModel != null) {
             pcBuildToBeUpdated.setMotherboardModel(motherboardModel);
         }
-        if (psuModel != null) {
+        if(psuModel != null) {
             pcBuildToBeUpdated.setPsuModel(psuModel);
         }
-        if (caseModel != null) {
+        if(caseModel != null) {
             pcBuildToBeUpdated.setCaseModel(caseModel);
         }
-        if (dataStorageModel != null) {
+        if(dataStorageModel != null) {
             pcBuildToBeUpdated.setDataStorageModel(dataStorageModel);
         }
-        if (ramModel != null) {
+        if(ramModel != null) {
             pcBuildToBeUpdated.setRamModel(ramModel);
         }
 
@@ -145,7 +145,7 @@ public class PcBuildApiService {
             json = mapper.writeValueAsString(pcBuildToBeUpdated);
 
             logger.debug("ResultingJSONstring = " + json);
-        } catch (JsonProcessingException e) {
+        } catch(JsonProcessingException e) {
             logger.error("JSON Processing Exception: " + e);
         }
 
@@ -169,22 +169,23 @@ public class PcBuildApiService {
         PcBuild pcBuildToDelete = pcBuildDao.getById(buildId);
 
         // Delete the PcBuild
-        if (pcBuildToDelete != null) {
+        if(pcBuildToDelete != null) {
             pcBuildDao.delete(pcBuildToDelete);
+
             success = true;
         }
 
         logger.debug("Was PcBuild deleted: " + success);
 
         // If the PcBuild was deleted, return the PcBuild data back to user.
-        if (success) {
+        if(success) {
             String json = null;
 
             try {
                 json = mapper.writeValueAsString(pcBuildToDelete);
 
                 logger.debug("ResultingJSONstring = " + json);
-            } catch (JsonProcessingException e) {
+            } catch(JsonProcessingException e) {
                 logger.error("JSON Processing Exception: " + e);
             }
 

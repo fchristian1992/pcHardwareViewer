@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="76adffd3-7fdd-4679-af1c-67eb2eeb877d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/enterprise/restful/HardwareViewerRestful.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/restful/HardwareViewerRestful.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/enterprise/service/PcBuildApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/service/PcBuildApiService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/enterprise/service/UserApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/service/UserApiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/enterprise/persistence/UserDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/enterprise/persistence/UserDaoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -254,7 +252,8 @@
       <workItem from="1669319637827" duration="17111000" />
       <workItem from="1669670022002" duration="5214000" />
       <workItem from="1669752638927" duration="802000" />
-      <workItem from="1669753936638" duration="3274000" />
+      <workItem from="1669753936638" duration="4459000" />
+      <workItem from="1669833750315" duration="1708000" />
     </task>
     <servers />
   </component>
