@@ -1,0 +1,4 @@
+org\enterprise\persistence\UserDaoTest.class
+org\enterprise\persistence\PcBuildDaoTest.class
+org\enterprise\util\Database.class
+org\enterprise\util\PropertiesLoader.class

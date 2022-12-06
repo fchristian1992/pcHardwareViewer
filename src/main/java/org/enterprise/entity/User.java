@@ -1,5 +1,6 @@
 package org.enterprise.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import java.util.HashSet;
@@ -23,6 +24,7 @@ public class User {
     @Column(name = "password")
     private String password;
 
+    @JsonManagedReference
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<PcBuild> pcBuilds = new HashSet<>();
 

@@ -1,0 +1,8 @@
+org\enterprise\restful\HardwareViewerRestful.class
+org\enterprise\entity\User.class
+org\enterprise\entity\PcBuild.class
+org\enterprise\service\PcBuildApiService.class
+org\enterprise\restful\HardwareViewerRestfulSpecs.class
+org\enterprise\persistence\GenericDao.class
+org\enterprise\service\UserApiService.class
+org\enterprise\persistence\SessionFactoryProvider.class

@@ -7,6 +7,7 @@ import org.enterprise.service.UserApiService;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 
+@Path("/application")
 public class HardwareViewerRestful {
     UserApiService userRelatedData = new UserApiService();
     PcBuildApiService pcBuildRelatedData = new PcBuildApiService();
@@ -18,15 +19,16 @@ public class HardwareViewerRestful {
      * Create a new user and add to database.
      * CREATE.r.u.d
      *
-     * http://localhost:8080
-     * @version 1.5 Working
+     * http://localhost:8080/HardwareViewer_war/application/users/add
      *
      * @param username
      * @param password
      * @return A JSON object with the new users info
+     *
+     * STATUS: works as intended
      */
     @POST
-    @Path("users/add")
+    @Path("/users/add")
     @Produces("application/json")
     public Response restfulCreateUser(
             @QueryParam("username") String username,
@@ -42,14 +44,16 @@ public class HardwareViewerRestful {
      * Get a specific user by inputting an id
      * c.READ.u.d
      *
-     * http://localhost:8080/
+     * http://localhost:8080/HardwareViewer_war/application/users/[user ID]
      * @version 1.5 Working
      *
      * @param userId
      * @return json specific user
+     *
+     * STATUS: works as intended
      */
     @GET
-    @Path("users/{userId}")
+    @Path("/users/{userId}")
     @Produces("application/json")
     public Response restfulGetSpecificUser(@PathParam("userId") int userId) {
         // Get a specific user based on id provided.
@@ -63,14 +67,16 @@ public class HardwareViewerRestful {
      * Update a user's information
      * c.r.UPDATE.d
      *
-     * http://localhost:8080/
+     * http://localhost:8080/HardwareViewer_war/application/users/update/[user ID]
      * @version 1.5 Working
      *
      * @param
      * @return the response
+     *
+     * STATUS: works as intended
      */
     @PUT
-    @Path("users/update/{userId}")
+    @Path("/users/update/{userId}")
     @Produces("application/json")
     public Response restfulUpdateUser(
             @PathParam("userId") int userId,
@@ -89,13 +95,15 @@ public class HardwareViewerRestful {
      * Delete a user.
      * c.r.u.DELETE
      *
-     * http://localhost:8080/
+     * http://localhost:8080/HardwareViewer_war/application/users/delete/[user ID]
      * @version 1.5 Working
      *
      * @return the response
+     *
+     * STATUS: works as intended
      */
     @DELETE
-    @Path("users/delete/{userId}")
+    @Path("/users/delete/{userId}")
     @Produces("application/json")
     public Response restfulDeleteUser(@PathParam("userId") int userId) {
         // Call on delete user method to delete the user.
@@ -112,7 +120,7 @@ public class HardwareViewerRestful {
      * Create a new PcBuild and add to the database manually.
      * CREATE.r.u.d
      *
-     * http://localhost:8080/
+     * http://localhost:8080/HardwareViewer_war/application/pcbuild/add
      * @version 1.5 Working
      *
      * @param cpuModel         the cpu model
@@ -125,9 +133,11 @@ public class HardwareViewerRestful {
      * @param ramModel         the ram model
      * @param userId           the user
      * @return A JSON object with the new PC build info.
+     *
+     * STATUS: works as intended
      */
     @POST
-    @Path("pcbuild/add")
+    @Path("/pcbuild/add")
     @Produces("application/json")
     public Response restfulCreatePcBuild(
             @QueryParam("cpu_model") String cpuModel,
@@ -156,14 +166,16 @@ public class HardwareViewerRestful {
      * Get a specific PcBuild by pcBuildId
      * c.READ.u.d
      *
-     * http://localhost:8080/
+     * http://localhost:8080/HardwareViewer_war/application/pcbuild/[PC build ID]
      * @version 1.5 Working
      *
      * @param buildId
      * @return
+     *
+     * STATUS: works as intended
      */
     @GET
-    @Path("pcbuild/{buildId}")
+    @Path("/pcbuild/{buildId}")
     @Produces("application/json")
     public Response restfulGetSpecificPcBuild(@PathParam("buildId") int buildId) {
         // Get a specific PcBuild based on id provided.
@@ -177,7 +189,7 @@ public class HardwareViewerRestful {
      * Update a PcBuild in the database.
      * c.r.UPDATE.d
      *
-     * http://localhost:8080/
+     * http://localhost:8080/HardwareViewer_war/application/pcbuild/update/[PC build ID]
      * @version 1.0 Working
      *
      * @param cpuModel         the cpu model
@@ -189,9 +201,11 @@ public class HardwareViewerRestful {
      * @param dataStorageModel the data storage model
      * @param ramModel         the ram model
      * @return A JSON object with the new PC build info.
+     *
+     * STATUS: works as intended
      */
     @PUT
-    @Path("pcbuild/update/{buildId}")
+    @Path("/pcbuild/update/{buildId}")
     @Produces("application/json")
     public Response restfulUpdatePcBuild(
             @PathParam("buildId") int buildId,
@@ -216,14 +230,16 @@ public class HardwareViewerRestful {
      * Delete a PcBuild
      * c.r.u.DELETE
      *
-     * http://localhost:8080/
+     * http://localhost:8080/HardwareViewer_war/application/pcbuild/delete/[PC build ID]
      * @version 0.5 Needs Work
      *
      * @param buildId
      * @return
+     *
+     * STATUS: works as intended
      */
     @DELETE
-    @Path("pcbuild/delete/{buildId}")
+    @Path("/pcbuild/delete/{buildId}")
     @Produces("application/json")
     public Response restfulDeletePcBuild(@PathParam("buildId") int buildId) {
         String json = pcBuildRelatedData.deletePcBuild(buildId);

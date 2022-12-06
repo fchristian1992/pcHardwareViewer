@@ -1,5 +1,6 @@
 package org.enterprise.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import java.util.Objects;
@@ -39,6 +40,7 @@ public class PcBuild {
     @Column(name = "ram_model")
     private String ramModel;
 
+    @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "userId", referencedColumnName = "userId")
     private User user;
