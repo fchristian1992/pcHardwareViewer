@@ -10,39 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76adffd3-7fdd-4679-af1c-67eb2eeb877d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrapScripts.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/footer.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/head.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/auth/CognitoJWTParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/auth/CognitoTokenHeader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/auth/Keys.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/auth/KeysItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/auth/TokenResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/controller/Auth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/controller/LogIn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/util/PropertiesLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/15b3b9db-0723-47b8-87bf-37f49e6994ac.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/15b3b9db-0723-47b8-87bf-37f49e6994ac.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/enterprise/entity/PcBuild.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/entity/PcBuild.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/enterprise/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/enterprise/restful/HardwareViewerRestful.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/restful/HardwareViewerRestful.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/HardwareViewer.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/HardwareViewer.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/HardwareViewer/WEB-INF/classes/org/enterprise/entity/PcBuild.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/HardwareViewer/WEB-INF/classes/org/enterprise/entity/PcBuild.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/HardwareViewer/WEB-INF/classes/org/enterprise/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/HardwareViewer/WEB-INF/classes/org/enterprise/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/HardwareViewer/WEB-INF/classes/org/enterprise/persistence/PcBuildDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/HardwareViewer/WEB-INF/classes/org/enterprise/persistence/UserDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/HardwareViewer/WEB-INF/lib/mysql-connector-java-8.0.22.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/HardwareViewer/WEB-INF/lib/protobuf-java-3.11.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/HardwareViewer/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/HardwareViewer/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/HardwareViewer/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/HardwareViewer/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/enterprise/entity/PcBuild.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/enterprise/entity/PcBuild.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/enterprise/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/enterprise/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.enterprise.persistence.PcBuildDaoTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.enterprise.persistence.PcBuildDaoTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.enterprise.persistence.UserDaoTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.enterprise.persistence.UserDaoTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/org.enterprise.persistence.PcBuildDaoTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/org.enterprise.persistence.PcBuildDaoTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/org.enterprise.persistence.UserDaoTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/org.enterprise.persistence.UserDaoTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/enterprise/persistence/SessionFactoryProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/persistence/SessionFactoryProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/enterprise/service/UserApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/service/UserApiService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +82,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "create.test.in.the.same.root": "true",
-    "last_opened_file_path": "C:/Users/Frankie/Documents/School/Fall 2022/Enterprise Java/PCHardwareViewer",
+    "last_opened_file_path": "C:/Users/Frankie/Documents/School/Fall 2022/Enterprise Java/PCHardwareViewer/src/main/java",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -125,10 +106,12 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Frankie\Documents\School\Fall 2022\Enterprise Java\PCHardwareViewer\src\test\resources" />
+      <recent name="C:\Users\Frankie\Documents\School\Fall 2022\Enterprise Java\PCHardwareViewer\src\main\java" />
       <recent name="C:\Users\Frankie\Documents\School\Fall 2022\Enterprise Java\PCHardwareViewer\src\main\resources" />
+      <recent name="C:\Users\Frankie\Documents\School\Fall 2022\Enterprise Java\PCHardwareViewer\src\test\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Frankie\Documents\School\Fall 2022\Enterprise Java\PCHardwareViewer\src\main\java\org\enterprise\util" />
       <recent name="C:\Users\Frankie\Documents\School\Fall 2022\Enterprise Java\PCHardwareViewer\src\main\webapp" />
       <recent name="C:\Users\Frankie\Documents\School\Fall 2022\Enterprise Java\PCHardwareViewer\src\test\java" />
       <recent name="C:\Users\Frankie\Documents\School\Fall 2022\Enterprise Java\PCHardwareViewer\src\test" />
@@ -147,6 +130,7 @@
       <recent name="entity" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.enterprise.controller" />
       <recent name="" />
     </key>
   </component>
@@ -514,7 +498,8 @@
       <workItem from="1669934358213" duration="12634000" />
       <workItem from="1670097265323" duration="3521000" />
       <workItem from="1670102855123" duration="12165000" />
-      <workItem from="1670261063258" duration="17380000" />
+      <workItem from="1670261063258" duration="18059000" />
+      <workItem from="1670434060824" duration="8090000" />
     </task>
     <servers />
   </component>

@@ -65,7 +65,6 @@ public class UserApiService {
             json = mapper.writeValueAsString(user);
 
             logger.debug("ResultingJSONstring = " + json);
-
         } catch(JsonProcessingException e) {
             logger.error("JSON Processing Exception: " + e);
         }
@@ -101,7 +100,6 @@ public class UserApiService {
 
         // Update the user in the database.
         userDao.saveOrUpdate(user);
-
         logger.debug("Sending back updated user info: " + user);
 
         String json = null;
@@ -133,7 +131,6 @@ public class UserApiService {
 
         // Delete the user from the database.
         userDao.delete(user);
-
         logger.debug("Sending back deleted user info: " + user);
 
         String json = null;
@@ -142,7 +139,6 @@ public class UserApiService {
             json = mapper.writeValueAsString(user);
 
             logger.debug("ResultingJSONstring = " + json);
-
         } catch(JsonProcessingException e) {
             logger.error("JSON Processing Exception: " + e);
         }
