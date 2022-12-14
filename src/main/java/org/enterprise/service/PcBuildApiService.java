@@ -102,7 +102,7 @@ public class PcBuildApiService {
             String cpuCoolerModel, String motherboardModel, String psuModel,
             String caseModel, String dataStorageModel, String ramModel) {
         // Creat the new pcBuildDao.
-        GenericDao<PcBuild> pcBuildDao = new GenericDao(PcBuild.class);
+        GenericDao<PcBuild> pcBuildDao = new GenericDao<>(PcBuild.class);
 
         // Get the PcBuild object by given buildId.
         PcBuild pcBuildToBeUpdated = pcBuildDao.getById(buildId);

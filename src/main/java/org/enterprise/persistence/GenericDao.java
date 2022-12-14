@@ -5,6 +5,11 @@ import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
+import java.util.List;
+
 /**
  * The type Generic dao.
  *
@@ -36,6 +41,23 @@ public class GenericDao<T> {
 
         session.close();
         return entity;
+    }
+
+    /**
+     * Gets entities by a specific property
+     *
+     * @param propertyName Given property
+     * @param value Given value of referenced property
+     * @return list
+     */
+    public List<T> getBySpecificProperty(String propertyName, Object value) {
+        Session session = getSession();
+        CriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery<T> query = builder.createQuery(type);
+        Root<T> root = query.from(type);
+
+        query.select(root).where(builder.equal(root.get(propertyName),value));
+        return session.createQuery(query).getResultList();
     }
 
     /**

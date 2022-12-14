@@ -3,9 +3,7 @@ package org.enterprise.entity;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 /**
  * The type User.
@@ -31,7 +29,7 @@ public class User {
         orphanRemoval = true,
         fetch = FetchType.EAGER
     )
-    private Set<PcBuild> pcBuilds = new HashSet<>();
+    private List<PcBuild> pcBuilds = new ArrayList<>();
 
     /**
      * Instantiates a new User.
@@ -122,7 +120,7 @@ public class User {
      *
      * @return the pc builds
      */
-    public Set<PcBuild> getPcBuilds() {
+    public List<PcBuild> getPcBuilds() {
         return pcBuilds;
     }
 
@@ -131,7 +129,7 @@ public class User {
      *
      * @param pcBuilds the pc builds
      */
-    public void setPcBuilds(Set<PcBuild> pcBuilds) {
+    public void setPcBuilds(List<PcBuild> pcBuilds) {
         this.pcBuilds = pcBuilds;
     }
 

@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 // Defines the base URI
-@ApplicationPath("/")
+@ApplicationPath("/application")
 // The java class declares root resource and provider classes
 public class HardwareViewerRestfulSpecs extends Application {
     // Returns a non-empty collection with classes

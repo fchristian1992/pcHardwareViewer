@@ -7,7 +7,7 @@ import org.enterprise.service.UserApiService;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 
-@Path("/application")
+@Path("/services")
 public class HardwareViewerRestful {
     UserApiService userRelatedData = new UserApiService();
     PcBuildApiService pcBuildRelatedData = new PcBuildApiService();
@@ -19,7 +19,7 @@ public class HardwareViewerRestful {
      * Create a new user and add to database.
      * CREATE.r.u.d
      *
-     * http://localhost:8080/HardwareViewer_war/application/users/add
+     * http://localhost:8080/HardwareViewer_war/application/services/users/add
      *
      * @param username
      * @param password
@@ -44,7 +44,7 @@ public class HardwareViewerRestful {
      * Get a specific user by inputting an id
      * c.READ.u.d
      *
-     * http://localhost:8080/HardwareViewer_war/application/users/[user ID]
+     * http://localhost:8080/HardwareViewer_war/application/services/users/[user ID]
      * @version 1.5 Working
      *
      * @param userId
@@ -67,7 +67,7 @@ public class HardwareViewerRestful {
      * Update a user's information
      * c.r.UPDATE.d
      *
-     * http://localhost:8080/HardwareViewer_war/application/users/update/[user ID]
+     * http://localhost:8080/HardwareViewer_war/application/services/users/update/[user ID]
      * @version 1.5 Working
      *
      * @param
@@ -95,7 +95,7 @@ public class HardwareViewerRestful {
      * Delete a user.
      * c.r.u.DELETE
      *
-     * http://localhost:8080/HardwareViewer_war/application/users/delete/[user ID]
+     * http://localhost:8080/HardwareViewer_war/application/services/users/delete/[user ID]
      * @version 1.5 Working
      *
      * @return the response
@@ -120,7 +120,7 @@ public class HardwareViewerRestful {
      * Create a new PcBuild and add to the database manually.
      * CREATE.r.u.d
      *
-     * http://localhost:8080/HardwareViewer_war/application/pcbuild/add
+     * http://localhost:8080/HardwareViewer_war/application/services/pcbuild/add
      * @version 1.5 Working
      *
      * @param cpuModel         the cpu model
@@ -166,7 +166,7 @@ public class HardwareViewerRestful {
      * Get a specific PcBuild by pcBuildId
      * c.READ.u.d
      *
-     * http://localhost:8080/HardwareViewer_war/application/pcbuild/[PC build ID]
+     * http://localhost:8080/HardwareViewer_war/application/services/pcbuild/[PC build ID]
      * @version 1.5 Working
      *
      * @param buildId
@@ -189,7 +189,7 @@ public class HardwareViewerRestful {
      * Update a PcBuild in the database.
      * c.r.UPDATE.d
      *
-     * http://localhost:8080/HardwareViewer_war/application/pcbuild/update/[PC build ID]
+     * http://localhost:8080/HardwareViewer_war/application/services/pcbuild/update/[PC build ID]
      * @version 1.0 Working
      *
      * @param cpuModel         the cpu model
@@ -230,7 +230,7 @@ public class HardwareViewerRestful {
      * Delete a PcBuild
      * c.r.u.DELETE
      *
-     * http://localhost:8080/HardwareViewer_war/application/pcbuild/delete/[PC build ID]
+     * http://localhost:8080/HardwareViewer_war/application/services/pcbuild/delete/[PC build ID]
      * @version 0.5 Needs Work
      *
      * @param buildId

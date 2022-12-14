@@ -6,16 +6,22 @@ import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.enterprise.auth.*;
+import org.enterprise.entity.PcBuild;
+import org.enterprise.entity.User;
+import org.enterprise.persistence.GenericDao;
 import org.enterprise.util.PropertiesLoader;
 import org.apache.commons.io.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.hibernate.sql.ordering.antlr.GeneratedOrderByFragmentRenderer;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
 import java.math.BigInteger;
@@ -32,13 +38,11 @@ import java.security.PublicKey;
 import java.security.interfaces.RSAPublicKey;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.RSAPublicKeySpec;
-import java.util.Base64;
-import java.util.HashMap;
-import java.util.Properties;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @WebServlet(
-    urlPatterns = {"/org/enterprise/auth"}
+    urlPatterns = {"/auth"}
 )
 // TODO if something goes wrong it this process, route to an error page. Currently, errors are only caught and logged.
 /**
@@ -55,8 +59,9 @@ public class Auth extends HttpServlet implements PropertiesLoader {
     String REGION;
     String POOL_ID;
     Keys jwks;
-
     private final Logger logger = LogManager.getLogger(this.getClass());
+    int loggedInUserId;
+    Boolean isNewUser;
 
     @Override
     public void init() throws ServletException {
@@ -78,7 +83,10 @@ public class Auth extends HttpServlet implements PropertiesLoader {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         String authCode = req.getParameter("code");
-        String userName = null;
+        Map<String, String> user = null;
+        HttpSession session = req.getSession();
+        GenericDao<User> userDao = new GenericDao<>(User.class);
+        PcBuild pcBuild = null;
 
         if(authCode == null) {
             logger.error("Auth code is null");
@@ -88,9 +96,10 @@ public class Auth extends HttpServlet implements PropertiesLoader {
 
             try {
                 TokenResponse tokenResponse = getToken(authRequest);
-                userName = validate(tokenResponse);
+                user = validate(tokenResponse);
 
-                req.setAttribute("userName", userName);
+                insertUserIntoDatabase(user);
+                session.setAttribute("userName", user.get("username"));
             } catch(IOException e) {
                 logger.error("Error getting or validating the token: "
                         + e.getMessage(), e);
@@ -100,11 +109,24 @@ public class Auth extends HttpServlet implements PropertiesLoader {
                         + e.getMessage(), e);
                 req.getRequestDispatcher("/error.jsp");
             }
+
+            User loggedInUser = userDao.getById(loggedInUserId);
+
+            if(loggedInUser.getPcBuilds().size() > 0) {
+                pcBuild = loggedInUser.getPcBuilds().get(0);
+            }
+
+            session.setAttribute("pcBuild", pcBuild);
+            session.setAttribute("user", loggedInUser);
+            session.setAttribute("isNewUser", isNewUser);
         }
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
-
-        dispatcher.forward(req, resp);
+        if(isNewUser) {
+            req.getRequestDispatcher("/new_build_form.jsp")
+                    .forward(req, resp);
+        } else {
+            req.getRequestDispatcher("/parts_list.jsp").forward(req, resp);
+        }
     }
 
     /**
@@ -120,15 +142,19 @@ public class Auth extends HttpServlet implements PropertiesLoader {
             throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
         HttpResponse<?> response = null;
-        response = client.send(authRequest,
-                HttpResponse.BodyHandlers.ofString());
+        response = client.send(
+            authRequest,
+            HttpResponse.BodyHandlers.ofString()
+        );
 
         logger.debug("Response headers: " + response.headers().toString());
         logger.debug("Response body: " + response.body().toString());
 
         ObjectMapper mapper = new ObjectMapper();
-        TokenResponse tokenResponse = mapper
-                .readValue(response.body().toString(), TokenResponse.class);
+        TokenResponse tokenResponse = mapper.readValue(
+            response.body().toString(),
+            TokenResponse.class
+        );
 
         logger.debug("Id token: " + tokenResponse.getIdToken());
         return tokenResponse;
@@ -142,7 +168,8 @@ public class Auth extends HttpServlet implements PropertiesLoader {
      * @return
      * @throws IOException
      */
-    private String validate(TokenResponse tokenResponse) throws IOException {
+    private Map<String, String> validate(TokenResponse tokenResponse)
+            throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         CognitoTokenHeader tokenHeader = mapper.readValue(
             CognitoJWTParser.getHeader(
@@ -165,10 +192,10 @@ public class Auth extends HttpServlet implements PropertiesLoader {
         );
 
         BigInteger exponent = new BigInteger(
-                1,
-                org.apache.commons.codec.binary.Base64.decodeBase64(
-                        jwks.getKeys().get(0).getE()
-                )
+            1,
+            org.apache.commons.codec.binary.Base64.decodeBase64(
+                jwks.getKeys().get(0).getE()
+            )
         );
 
         // TODO the following is "happy path", what if the exceptions are caught?
@@ -179,9 +206,9 @@ public class Auth extends HttpServlet implements PropertiesLoader {
             publicKey = KeyFactory
                     .getInstance("RSA")
                     .generatePublic(new RSAPublicKeySpec(modulus, exponent));
-        } catch (InvalidKeySpecException e) {
+        } catch(InvalidKeySpecException e) {
             logger.error("Invalid Key Error " + e.getMessage(), e);
-        } catch (NoSuchAlgorithmException e) {
+        } catch(NoSuchAlgorithmException e) {
             logger.error("Algorithm Error " + e.getMessage(), e);
         }
 
@@ -189,8 +216,11 @@ public class Auth extends HttpServlet implements PropertiesLoader {
         Algorithm algorithm = Algorithm.RSA256((RSAPublicKey) publicKey, null);
 
         // Verify ISS field of the token to make sure it's from the Cognito source
-        String iss = String.format("https://cognito-idp.%s.amazonaws.com/%s",
-                REGION, POOL_ID);
+        String iss = String.format(
+            "https://cognito-idp.%s.amazonaws.com/%s",
+            REGION,
+            POOL_ID
+        );
 
         JWTVerifier verifier = JWT.require(algorithm)
                 .withIssuer(iss)
@@ -199,16 +229,22 @@ public class Auth extends HttpServlet implements PropertiesLoader {
 
         // Verify the token
         DecodedJWT jwt = verifier.verify(tokenResponse.getIdToken());
-        String userName = jwt.getClaim("cognito:username").asString();
+        Map<String, String> userInfo = new HashMap<>();
+        String username = jwt.getClaim("cognito:username").asString();
+        String password = jwt.getClaim("password").asString();
 
-        logger.debug("here's the username: " + userName);
+        userInfo.put("username", username);
+        userInfo.put("password", password);
+
+        logger.debug("here's the username: "
+                + jwt.getClaim("cognito:username").asString());
         logger.debug("here are all the available claims: "
                 + jwt.getClaims());
 
         // TODO decide what you want to do with the info!
         // for now, I'm just returning username for display back to the browser
 
-        return userName;
+        return userInfo;
     }
 
     /** Create the auth url and use it to build the request.
@@ -226,16 +262,23 @@ public class Auth extends HttpServlet implements PropertiesLoader {
         parameters.put("code", authCode);
         parameters.put("redirect_uri", REDIRECT_URL);
 
-        String form = parameters.keySet().stream()
-                .map(key -> key + "=" + URLEncoder.encode(parameters.get(key),
-                        StandardCharsets.UTF_8))
+        String form = parameters
+                .keySet()
+                .stream()
+                .map(key -> key + "=" + URLEncoder.encode(
+                    parameters.get(key),
+                    StandardCharsets.UTF_8)
+                )
                 .collect(Collectors.joining("&"));
 
         String encoding = Base64.getEncoder().encodeToString(keys.getBytes());
-        HttpRequest request = HttpRequest.newBuilder().uri(URI.create(OAUTH_URL))
+        HttpRequest request = HttpRequest
+                .newBuilder()
+                .uri(URI.create(OAUTH_URL))
                 .headers("Content-Type", "application/x-www-form-urlencoded",
                         "Authorization", "Basic " + encoding)
-                .POST(HttpRequest.BodyPublishers.ofString(form)).build();
+                .POST(HttpRequest.BodyPublishers.ofString(form))
+                .build();
 
         return request;
     }
@@ -267,11 +310,45 @@ public class Auth extends HttpServlet implements PropertiesLoader {
 
             logger.debug("Keys are loaded. Here's e: "
                     + jwks.getKeys().get(0).getE());
-        } catch (IOException ioException) {
+        } catch(IOException ioException) {
             logger.error("Cannot load json..."
                     + ioException.getMessage(), ioException);
-        } catch (Exception e) {
+        } catch(Exception e) {
             logger.error("Error loading json" + e.getMessage(), e);
+        }
+    }
+
+    /**
+     * Check if user is in the database.  If they are not, add them.
+     * If they are already there, check for changed data and update.
+     */
+    private void insertUserIntoDatabase(Map<String, String> user) {
+        // Call on User class via dao.
+        GenericDao<User> userDao = new GenericDao<>(User.class);
+
+        // Create a list and populate it from the database using the user provided username.
+        List<User> findUser = userDao.getBySpecificProperty(
+            "username",
+            user.get("username")
+        );
+
+        logger.debug("InsertDatabaseMethod: " + user);
+
+        // If the populated list is empty, create a new user and insert it into database,
+        // Otherwise, note that user is already in database.
+        if(findUser.isEmpty()) {
+            // Create a new user and insert user into database.
+            User newUser = new User(user.get("username"), user.get("password"));
+            loggedInUserId = userDao.insert(newUser);
+            isNewUser = true;
+
+            logger.debug("New user added to database with username: "
+                    + user.get("username"));
+        } else {
+            logger.debug("User already exists: " + user.get("username"));
+
+            loggedInUserId = findUser.get(0).getUserId();
+            isNewUser = false;
         }
     }
 
@@ -290,10 +367,10 @@ public class Auth extends HttpServlet implements PropertiesLoader {
             REDIRECT_URL = properties.getProperty("redirectURL");
             REGION = properties.getProperty("region");
             POOL_ID = properties.getProperty("poolId");
-        } catch (IOException ioException) {
+        } catch(IOException ioException) {
             logger.error("Cannot load properties..."
                     + ioException.getMessage(), ioException);
-        } catch (Exception e) {
+        } catch(Exception e) {
             logger.error("Error loading properties" + e.getMessage(), e);
         }
     }
