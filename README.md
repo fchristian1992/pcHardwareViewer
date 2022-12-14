@@ -7,6 +7,10 @@ it is a bit inconvenient to find what your PC's hardware and specs are. I would
 like to make an application that you can easily store, view, and update PC 
 hardware and the specs of each part.
 
+### Presentation link
+
+https://youtu.be/cDSyUOZxwrE
+
 ### Project Technologies/techniques
 
 * Database

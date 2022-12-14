@@ -10,50 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76adffd3-7fdd-4679-af1c-67eb2eeb877d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/controller/CreateNewBuild.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/controller/LogOut.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/error.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/new_build_form.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/parts_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/15b3b9db-0723-47b8-87bf-37f49e6994ac.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/15b3b9db-0723-47b8-87bf-37f49e6994ac.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/hardwareviewer.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cognito.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/enterprise/controller/Auth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/controller/Auth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/enterprise/controller/LogIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/controller/LogIn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/enterprise/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/enterprise/persistence/GenericDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/persistence/GenericDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/enterprise/restful/HardwareViewerRestful.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/restful/HardwareViewerRestful.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/enterprise/restful/HardwareViewerRestfulSpecs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/restful/HardwareViewerRestfulSpecs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/enterprise/service/PcBuildApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/enterprise/service/PcBuildApiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/head.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/head.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/HardwareViewer.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/HardwareViewer.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/HardwareViewer/WEB-INF/classes/log4j2.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/HardwareViewer/WEB-INF/classes/log4j2.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/HardwareViewer/WEB-INF/classes/org/enterprise/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/HardwareViewer/WEB-INF/classes/org/enterprise/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/HardwareViewer/WEB-INF/classes/org/enterprise/persistence/GenericDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/HardwareViewer/WEB-INF/classes/org/enterprise/persistence/GenericDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/HardwareViewer/WEB-INF/classes/org/enterprise/persistence/SessionFactoryProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/HardwareViewer/WEB-INF/classes/org/enterprise/persistence/SessionFactoryProvider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/HardwareViewer/WEB-INF/classes/org/enterprise/restful/HardwareViewerRestful.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/HardwareViewer/WEB-INF/classes/org/enterprise/restful/HardwareViewerRestful.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/HardwareViewer/WEB-INF/classes/org/enterprise/restful/HardwareViewerRestfulSpecs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/HardwareViewer/WEB-INF/classes/org/enterprise/restful/HardwareViewerRestfulSpecs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/HardwareViewer/WEB-INF/classes/org/enterprise/service/UserApiService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/HardwareViewer/WEB-INF/classes/org/enterprise/service/UserApiService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/HardwareViewer/head.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/HardwareViewer/head.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/HardwareViewer/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/HardwareViewer/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/HardwareViewer/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/HardwareViewer/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j2.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j2.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/enterprise/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/enterprise/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/enterprise/persistence/GenericDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/enterprise/persistence/GenericDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/enterprise/persistence/SessionFactoryProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/enterprise/persistence/SessionFactoryProvider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/enterprise/restful/HardwareViewerRestful.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/enterprise/restful/HardwareViewerRestful.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/enterprise/restful/HardwareViewerRestfulSpecs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/enterprise/restful/HardwareViewerRestfulSpecs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/enterprise/service/UserApiService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/enterprise/service/UserApiService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.enterprise.persistence.PcBuildDaoTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.enterprise.persistence.PcBuildDaoTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.enterprise.persistence.UserDaoTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.enterprise.persistence.UserDaoTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/org.enterprise.persistence.PcBuildDaoTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/org.enterprise.persistence.PcBuildDaoTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/org.enterprise.persistence.UserDaoTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/org.enterprise.persistence.UserDaoTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -522,7 +480,7 @@
       <workItem from="1670604923477" duration="48918000" />
       <workItem from="1670884273789" duration="10446000" />
       <workItem from="1670951814222" duration="15493000" />
-      <workItem from="1670970478391" duration="7022000" />
+      <workItem from="1670970478391" duration="7923000" />
     </task>
     <servers />
   </component>
